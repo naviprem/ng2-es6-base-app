@@ -1,6 +1,4 @@
-var ng = {
-    core : require("@angular/core"),
-    platformBrowser : require("@angular/platform-browser"),
-    platformBrowserDynamic : require("@angular/platform-browser-dynamic")
-};
 
+import "@angular/core";
+import "@angular/platform-browser";
+import "@angular/platform-browser-dynamic";
