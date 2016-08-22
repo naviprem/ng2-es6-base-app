@@ -4,6 +4,7 @@ This is a seed-app built using the below stack
 2. ECMAScript 2015
 3. Babel (babel-preset-es2015)
 4. Webpack
+5. sass
 
 ## Setup
 

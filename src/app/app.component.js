@@ -12,7 +12,8 @@ class AppComponent {
 AppComponent.annotations = [
     new ngCore.Component({
         selector: 'my-app',
-        template: '<h3>Base App with ng2-rc5, es6, babel, webpack</h3>'
+        template: '<h3 class="app-header">Base App with ng2-rc5, es6, babel, webpack, sass</h3>',
+        styles: [require('./app.sass')]
     })
 ];
 
