@@ -1,6 +1,7 @@
 
 import ngCore from "@angular/core";
 import style from "./app.sass";
+import template from "./app.html";
 
 class AppComponent {
         constructor () {}
@@ -13,7 +14,7 @@ class AppComponent {
 AppComponent.annotations = [
     new ngCore.Component({
         selector: 'my-app',
-        template: '<h3 class="app-header">Base App with ng2-rc5, es6, babel, webpack, sass, karma, jasmine, phantomjs</h3>',
+        template: template,
         styles: [style]
     })
 ];
