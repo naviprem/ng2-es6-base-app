@@ -5,6 +5,9 @@ This is a seed-app built using the below stack
 3. Babel (babel-preset-es2015)
 4. Webpack
 5. sass
+6. Karma
+7. Jasmin
+8. PhantomJS
 
 ## Setup
 

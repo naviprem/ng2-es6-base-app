@@ -6,7 +6,9 @@
   "scripts": {
     "start": "webpack-dev-server --inline --progress --port 3040",
     "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail",
-    "lite": "lite-server"
+    "lite": "lite-server",
+    "babel": "./node_modules/.bin/babel src -d lib",
+    "test": "karma start ./config/karma.conf.js"
   },
   "private": true,
   "dependencies": {
@@ -39,15 +41,25 @@
     "jasmine-core": "2.4.1",
     "jasmine-spec-reporter": "2.5.0",
     "karma": "0.13.22",
-    "karma-chrome-launcher": "0.2.3",
     "karma-jasmine": "0.3.8",
+    "karma-phantomjs-launcher": "^1.0.0",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^1.7.0",
+    "null-loader": "^0.1.1",
+    "phantomjs-prebuilt": "^2.1.7",
     "lite-server": "^2.2.0",
     "protractor": "3.3.0",
     "raw-loader": "^0.5.1",
     "sass-loader": "^4.0.0",
     "style-loader": "^0.13.1",
-    "webpack": "^1.13.2",
+    "angular2-template-loader": "^0.4.0",
+    "file-loader": "^0.8.5",
+    "rimraf": "^2.5.2",
+    "ts-loader": "^0.8.1",
+    "typescript": "^1.8.10",
+    "typings": "^1.0.4",
+    "webpack": "^1.13.0",
     "webpack-dev-server": "^1.14.1",
-    "webpack-merge": "^0.14.1"
+    "webpack-merge": "^0.14.0"
   }
 }

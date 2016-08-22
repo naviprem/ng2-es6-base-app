@@ -2,17 +2,17 @@
 import ngCore from "@angular/core";
 
 class AppComponent {
-        constructor () {
-            let array = [1,2,3,4,5];
-            let odd = array.filter(n => n%2 == 1)
-        }
+        constructor () {}
+
+        //This add function is here to demonstrate Unit testing capabilities of this stack
+        add(a, b) { return a + b;}
     }
 
 
 AppComponent.annotations = [
     new ngCore.Component({
         selector: 'my-app',
-        template: '<h3 class="app-header">Base App with ng2-rc5, es6, babel, webpack, sass</h3>',
+        template: '<h3 class="app-header">Base App with ng2-rc5, es6, babel, webpack, sass, karma, jasmine, phantomjs</h3>',
         styles: [require('./app.sass')]
     })
 ];
