@@ -1,18 +1,21 @@
-import ngCore from "@angular/core";
+import { Injectable } from "@angular/core";
 import _ from "lodash";
 import { STATES } from "../mocks/state-list.mock";
 
-class StateListService {
+export class StateListService {
     constructor() {
     }
+
     getStates() {
         return Promise.resolve(STATES);
     }
+
     getStatesSlowly() {
         return new Promise((resolve, reject) => {
             setTimeout(() => { resolve(STATES);}, 2000)
         });
     }
+
     getState(id) {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
@@ -25,7 +28,4 @@ class StateListService {
 }
 
 
-StateListService.annotations = new ngCore.Injectable();
-
-
-export default StateListService;
+StateListService.annotations = [new Injectable()];

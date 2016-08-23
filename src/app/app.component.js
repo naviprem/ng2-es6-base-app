@@ -1,10 +1,10 @@
 
-import ngCore from "@angular/core";
+import { Component } from "@angular/core";
 import style from "./app.sass";
 import template from "./app.html";
-import StateListService from "./services/state-list.js";
+import { StateListService } from "./services/state-list.js";
 
-class AppComponent {
+export class AppComponent {
         constructor (stateListService) {
             this.stateListService = stateListService;
         }
@@ -28,14 +28,13 @@ class AppComponent {
         add(a, b) { return a + b;}
     }
 
-
 AppComponent.annotations = [
-    new ngCore.Component({
+    new Component({
         selector: 'my-app',
         template: template,
-        styles: [style],
-        providers: [StateListService]
+        styles: [ style ],
+        providers: [ StateListService ]
     })
 ];
 
-export default AppComponent;
+

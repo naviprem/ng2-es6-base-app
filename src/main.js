@@ -1,11 +1,10 @@
 
-import ngPlatformBrowserDynamic from "@angular/platform-browser-dynamic";
-import AppModule from './app/app.module';
+import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";
+import { AppModule } from './app/app.module';
 import { enableProdMode } from '@angular/core';
 
 document.addEventListener('DOMContentLoaded', function() {
-    ngPlatformBrowserDynamic
-        .platformBrowserDynamic()
+    platformBrowserDynamic()
         .bootstrapModule(AppModule);
 });
 
