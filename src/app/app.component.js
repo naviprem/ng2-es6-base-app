@@ -1,28 +1,11 @@
 
-import { Component } from "@angular/core";
+import { Component} from "@angular/core";
 import style from "./app.scss";
 import template from "./app.html";
-import { StateListService } from "./services/state-list.service.js";
+import { StateListComponent } from "./state-list/state-list.component.js";
 
 export class AppComponent {
-        constructor (stateListService) {
-            this.stateListService = stateListService;
-        }
-
-        static get parameters() {
-            return [[StateListService]];
-        }
-
-        ngOnInit() {
-            this.getItems();
-        }
-
-        getItems() {
-            var that = this;
-            this.stateListService.getStatesSlowly()
-                .then((states) => { that.items = states; console.log(that.items);})
-                .catch((err) => { console.error("error", err); });
-        }
+        constructor () {}
 
         //This add function is here to demonstrate Unit testing capabilities of this stack
         add(a, b) { return a + b;}
@@ -31,9 +14,9 @@ export class AppComponent {
 AppComponent.annotations = [
     new Component({
         selector: 'my-app',
+        declarations: [ StateListComponent ],
         template: template,
-        styles: [ style ],
-        providers: [ StateListService ]
+        styles: [ style ]
     })
 ];
 
