@@ -17,7 +17,7 @@ module.exports = {
     module: {
         loaders: [
             { test: /\.css$/, loader: "raw" },
-            { test: /\.sass$/, loaders: ["raw", "sass"] },
+            { test: /\.scss$/, loaders: ["raw", "sass"] },
             { test: /\.html$/, loader: "html" },
             { test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/, loader: 'file?name=assets/[name].[hash].[ext]'},
             { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" }

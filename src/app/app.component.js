@@ -1,6 +1,6 @@
 
 import { Component } from "@angular/core";
-import style from "./app.sass";
+import style from "./app.scss";
 import template from "./app.html";
 import { StateListService } from "./services/state-list.service.js";
 
